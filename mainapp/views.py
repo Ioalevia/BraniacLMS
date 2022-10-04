@@ -7,7 +7,7 @@ from mainapp import models as mainapp_models
 
 
 
-from .models import News
+from .models import News, Courses
 
 class MainPageView(TemplateView):
     template_name = "mainapp/index.html"
@@ -36,10 +36,8 @@ class NewsDetailPageView(TemplateView):
         context["news_obj"] = get_object_or_404(News, pk=pk)
         return context
 
-
 class LoginPageView(TemplateView):
     template_name = "mainapp/login.html"
-
 
 class ContactsPageView(TemplateView):
     template_name = "mainapp/contacts.html"
@@ -51,11 +49,17 @@ class DocSitePageView(TemplateView):
 
 class CoursesPageView(TemplateView):
     template_name = "mainapp/courses_list.html"
+    paginated_by = 3
 
     def get_context_data(self, **kwargs):
-        context = super(CoursesPageView, self).get_context_data(**kwargs)
-
-        context["objects"] = mainapp_models.Courses.objects.all()[:7]
+        page_number = self.request.GET.get(
+            'page',
+            1
+        )
+        paginator = Paginator(Courses.objects.all(), self.paginated_by)
+        page = paginator.get_page(page_number)
+        context = super().get_context_data(**kwargs)
+        context['page'] = page
         return context
 
 class CoursesDetailView(TemplateView):
