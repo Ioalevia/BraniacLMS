@@ -1,7 +1,7 @@
 {% extends 'mainapp/base_mainapp.html' %}
-{% load static markdownify %}
-
+{% load static markdownify crispy_forms_tags %}
 {% block content %}
+{% include 'mainapp/components/top_nav_panel.html' %}
 <h1 class="mt-2">
     {{ course_object.name }}
 </h1>
@@ -88,6 +88,40 @@
         </div>
     </div>
     {% endfor %}
-
 </div>
+
+<h3>Отзывы</h3>
+<div id="feedback_list">
+    {% if feedback_list %}
+    {% for item in feedback_list %}
+    {% include 'mainapp/components/feedback_card.html' %}
+    {% endfor %}
+    {% else %}
+    <p>
+        No feedback yet. Be first!
+    </p>
+    {% endif %}
+</div>
+
+
+{% if feedback_form %}
+<div class="card" id="cardForm">
+    <div class="card-body">
+        <h5 class="card-title">Добавить отзыв</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Вы ещё не оставляли отзыв к этому
+            курсу</h6>
+        <p class="card-text">
+        <form action="{% url 'mainapp:course_feedback' %}" method="POST"
+            id="feedbackForm">
+            {% csrf_token %}
+            {{ feedback_form|crispy }}
+        </form>
+        <button id="feedbackSubmit"
+            class="btn btn-primary btn-block">Отправить</button>
+        </p>
+    </div>
+</div>
+{% endif %}
+{% include 'mainapp/components/footer.html' %}
 {% endblock content %}
+
