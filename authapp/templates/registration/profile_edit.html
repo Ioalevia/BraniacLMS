@@ -1,5 +1,5 @@
 {% extends 'mainapp/base_mainapp.html' %}
-
+{% load i18n %}
 {% block content %}
 {% include 'mainapp/components/top_nav_panel.html' %}
 <div class="row justify-content-center my-2">
@@ -67,7 +67,7 @@
       </div>
 
       <button type="submit"
-        class="btn btn-primary btn-block">Сохранить</button>
+        class="btn btn-primary btn-block">{% translate "save" %}</button>
     </form>
   </div>
 </div>
