@@ -5,7 +5,9 @@
 {% block content%}
 
     {% include 'mainapp/components/top_nav_panel.html' %}
-
+    {% block messages %}
+    {% include 'mainapp/components/messages.html' %}
+    {% endblock messages %}
     <div class="container-md">
 
 

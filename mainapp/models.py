@@ -1,5 +1,6 @@
 from django.db import models
 from mainapp.managers.news_manager import NewsManager
+from mainapp.managers.courses_manager import CoursesManager
 
 class News(models.Model):
     objects = NewsManager()
@@ -30,9 +31,6 @@ class News(models.Model):
         self.deleted = True
         self.save()
 
-class CoursesManager(models.Manager):
-    def get_queryset(self):
-        return super().get_queryset().filter(deleted=False)
 
 class Courses(models.Model):
     objects = CoursesManager()
