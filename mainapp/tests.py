@@ -13,6 +13,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from mainapp.models import *
 from mainapp import tasks as mainapp_tasks
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+
+options = Options()
+options.binary_location = r"C:/Program Files/Mozilla Firefox/firefox.exe"
+driver = webdriver.Firefox(options=options, executable_path=settings.SELENIUM_DRIVER_PATH_FF)
+driver.get('http://google.com/')
 
 class TestMainPage(TestCase):
 
