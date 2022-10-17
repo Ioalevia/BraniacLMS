@@ -48,7 +48,29 @@
             {% endif %}
         });
     </script>
+    <script>
+        $(document).ready(function () {
 
+            {% if feedback_form %}
+            $("#feedbackSubmit").click(function () {
+
+                $("#cardForm").hide();
+
+                var $form = $("#feedbackForm");
+                $.ajax({
+                    type: "POST",
+                    url: $form.attr("action"),
+                    data: $form.serialize(),
+                    success: function (data) {
+                        $("#feedback_list").append(data.card);
+                    }
+                });
+
+            });
+            {% endif %}
+
+        });
+    </script>
 
 </body>
 
