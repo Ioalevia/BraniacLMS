@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-13 22:25+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\authapp\forms.py:55
+msgid "Please, enter a valid age!"
+msgstr ""
+
+#: .\authapp\models.py:21
+msgid "username"
+msgstr "имя"
+
+#: .\authapp\models.py:25
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr "пиши короче"
+
+#: .\authapp\models.py:29
+msgid "A user with that username already exists."
+msgstr "уже имеется"
+
+#: .\authapp\models.py:32
+msgid "first name"
+msgstr "имя первое"
+
+#: .\authapp\models.py:33
+msgid "last name"
+msgstr "имя по папе"
+
+#: .\authapp\models.py:34
+msgid "age"
+msgstr "сколько лет"
+
+#: .\authapp\models.py:35
+msgid "avatar"
+msgstr "ава"
+
+#: .\authapp\models.py:39
+msgid "email address"
+msgstr "мыло"
+
+#: .\authapp\models.py:43
+msgid "A user with that email address already exists."
+msgstr "уже есть"
+
+#: .\authapp\models.py:47
+msgid "staff status"
+msgstr "статус"
+
+#: .\authapp\models.py:50
+msgid "Designates whether the user can log into this admin site."
+msgstr "ась"
+
+#: .\authapp\models.py:54
+msgid "active"
+msgstr "актив"
+
+#: .\authapp\models.py:57
+msgid ""
+"Designates whether this user should be treated as active.             "
+"Unselect this instead of deleting accounts."
+msgstr "ась ась"
+
+#: .\authapp\models.py:61
+msgid "date joined"
+msgstr "свиданка"
+
+#: .\authapp\models.py:70
+msgid "user"
+msgstr "юзер"
+
+#: .\authapp\models.py:71
+msgid "users"
+msgstr "юзеры"
+
+#: .\authapp\templates\authapp\customuser_form.html:28
+#: .\authapp\templates\registration\profile_edit.html:70
+msgid "save"
+msgstr "сэйв"
+
+#: .\authapp\views.py:14
+#, python-format
+msgid "Login success!<br>Hi, %(username)s"
+msgstr "прив, %(username)s"
+
+#: .\authapp\views.py:32
+msgid "See you later!"
+msgstr "поки"
+
+#: .\mainapp\admin.py:21 .\mainapp\models.py:122
+msgid "Course"
+msgstr "курс"
+
+#: .\mainapp\admin.py:26
+msgid "Mark deleted"
+msgstr "удалено"
+
+#: .\mainapp\admin.py:37
+#: .\mainapp\templates\mainapp\components\top_nav_panel.html:21
+msgid "Courses"
+msgstr "курсы"
+
+#: .\mainapp\forms.py:26
+msgid "Enter your message"
+msgstr "введите сообщение"
+
+#: .\mainapp\forms.py:27
+msgid "Message"
+msgstr "письмо"
+
+#: .\mainapp\models.py:37 .\mainapp\models.py:38
+#: .\mainapp\templates\mainapp\components\top_nav_panel.html:17
+msgid "News"
+msgstr "письма"
+
+#: .\mainapp\models.py:94
+msgid "Lesson"
+msgstr "урок"
+
+#: .\mainapp\models.py:95
+msgid "Lessons"
+msgstr "уроки"
+
+#: .\mainapp\models.py:114
+msgid "Teacher"
+msgstr "учитель"
+
+#: .\mainapp\models.py:115
+msgid "Teachers"
+msgstr "учителя"
+
+#: .\mainapp\models.py:125
+msgid "User"
+msgstr "юзер"
+
+#: .\mainapp\models.py:128
+msgid "No feedback"
+msgstr "няма"
+
+#: .\mainapp\models.py:128
+msgid "Feedback"
+msgstr "отпис"
+
+#: .\mainapp\models.py:131
+msgid "Rating"
+msgstr "рейтинг"
+
+#: .\mainapp\templates\mainapp\components\top_nav_panel.html:27
+msgid "Profile"
+msgstr "профиль"
+
+#: .\mainapp\views.py:147
+msgid "Message sended"
+msgstr "послано"
+
+#: .\mainapp\views.py:159
+msgid "You can send only one message per 5 minutes"
+msgstr "пиши реже"

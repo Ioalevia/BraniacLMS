@@ -1,5 +1,5 @@
 {% extends 'mainapp/base_mainapp.html' %}
-{% load static markdownify crispy_forms_tags %}
+{% load static markdownify crispy_forms_tags cache %}
 {% block content %}
 {% include 'mainapp/components/top_nav_panel.html' %}
 <h1 class="mt-2">
@@ -54,7 +54,7 @@
     </div>
 </div>
 <div class="accordion" id="accordionLessons">
-
+    {% cache 300 lessons %}
     {% for item in lessons %}
     <div class="card">
         <div class="card-header" id="headLessonPk{{ item.pk }}">
@@ -88,6 +88,7 @@
         </div>
     </div>
     {% endfor %}
+    {% endcache %}
 </div>
 
 <h3>Отзывы</h3>

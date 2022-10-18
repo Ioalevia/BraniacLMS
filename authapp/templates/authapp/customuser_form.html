@@ -1,5 +1,5 @@
 {% extends 'mainapp/base_mainapp.html' %}
-{% load crispy_forms_tags %}
+{% load crispy_forms_tags i18n%}
 {% block content %}
 {% include 'mainapp/components/top_nav_panel.html' %}
 <div class="row justify-content-center my-2">
@@ -25,7 +25,7 @@
           {% if user.is_anonymous %}
           Зарегистрироваться
           {% else %}
-          Сохранить
+          {% translate 'save' %}
           {% endif %}
         </button>
       </form>
